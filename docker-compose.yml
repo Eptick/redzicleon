@@ -4,11 +4,9 @@ services:
                 image: nginx
                 volumes:
                         - ${PWD}/src:/usr/share/nginx/html
-                        - type: volume
+                        - type: bind
                           source: nginx_conf/nginx.conf
                           target: /etc/nginx/nginx.conf
                           read_only: true
                 ports:
                         - "80:80"
-volumes:
-        nginx_conf/nginx.conf:
