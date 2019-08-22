@@ -5,7 +5,7 @@ services:
                 volumes:
                         - ${PWD}/src:/usr/share/nginx/html
                         - type: bind
-                          source: nginx_conf/nginx.conf
+                          source: ${PWD}/nginx_conf/nginx.conf
                           target: /etc/nginx/nginx.conf
                           read_only: true
                 ports:
