@@ -1,0 +1,262 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-floating'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var menuTitle = 'Architectural Agency'
+
+//- Page Content
+block content
+
+  // Hero Slider
+  section.bg-secondary
+    .container-fluid.px-0
+      .row.no-gutters.align-items-center
+        .col-xl-6.col-lg-5.pb-5.mb-5.pb-lg-0.mb-lg-0
+          .pl-lg-4.pt-5.pt-lg-0.mx-auto.ml-lg-auto.mr-lg-0.text-center.text-lg-left(style='max-width: 33rem;')
+            h1.h2.pb-2 Full-service Architectural Agency <span class='d-block d-lg-none d-xl-block font-weight-normal h3'>Focused on modern design, interiors and landscapes.</span>
+            a(href='#projects').btn.btn-style-5.btn-primary.scroll-to View portfolio
+        .col-xl-6.col-lg-7.d-none.d-lg-block
+          img(src='img/homepages/architect-agency/hero.jpg' alt='Architectural Agency').d-block.mx-auto.ml-lg-auto.mr-lg-0
+  
+  // Intro Video + Steps
+  section.mt-n5.mt-lg-0
+    .d-none.d-lg-block(style='margin-top: -8rem;')
+    .container-fluid.pb-5
+      .row
+        .col-xl-5.offset-xl-1.col-lg-6
+          .bg-white.box-shadow.position-relative.p-3.mx-auto(style='max-width: 45rem;')
+            img(src='img/homepages/architect-agency/video-cover.jpg' alt='Process video').d-block
+            a(href='https://player.vimeo.com/video/140052896?color=ac32e4&title=0&byline=0&portrait=0' data-fancybox data-width="1000" data-height="563").video-player-button.position-absolute.xy-center: i.fe-icon-play
+        .col-lg-6.text-center.text-lg-left
+          .d-none.d-lg-block(style='padding-top: 8rem;')
+          .mx-auto(style='max-width: 45rem;')
+            h2.pt-5.mt-lg-2.mb-0 Our process
+            span.text-muted.text-lg How we work step by step
+            .row.pt-3
+              .col-sm-4
+                h2.display-4.text-muted.opacity-25.font-weight-black 1
+                h3.font-weight-bold.text-xl.mb-0 Discover
+                p.text-muted.pt-2.d-lg-none.d-xl-block Gain an understanding of client's desires and needs
+              .col-sm-4
+                h2.display-4.text-muted.opacity-25.font-weight-black 2
+                h3.font-weight-bold.text-xl.mb-0 Imagine
+                p.text-muted.pt-2.d-lg-none.d-xl-block Composing ideas through schematic drawings
+              .col-sm-4
+                h2.display-4.text-muted.opacity-25.font-weight-black 3
+                h3.font-weight-bold.text-xl.mb-0 Develop
+                p.text-muted.pt-2.d-lg-none.d-xl-block Complete the detailed construction documentation
+
+  // Services
+  section.pt-lg-4.pb-5.mb-3
+    .container
+      h2.text-center.text-lg-left Services
+      .row.pt-4
+        .col-md-6
+          dl.dl-with-icon
+            dt
+              i.fe-icon-check-circle.text-success
+              | Master planning &amp; Urban design
+            dd Vestibulum id ligula porta felis euismod semper eget lacinia odio
+            dt
+              i.fe-icon-check-circle.text-success
+              | Site and building analysis
+            dd Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+            dt
+              i.fe-icon-check-circle.text-success
+              | Contract administration
+            dd Quis nostrum exercitationem ullam corporis suscipit laboriosam
+            dt
+              i.fe-icon-check-circle.text-success
+              | Building design
+            dd Quis nostrum exercitationem ullam corporis suscipit laboriosam
+            dt
+              i.fe-icon-check-circle.text-success
+              | Demolition planning
+            dd Itaque earum rerum hic tenetur a sapiente delectus reiciendis volu
+            dt
+              i.fe-icon-check-circle.text-success
+              | Project management
+            dd Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet
+        .col-md-6
+          dl.dl-with-icon
+            dt
+              i.fe-icon-check-circle.text-success
+              | Interior design
+            dd Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet
+            dt
+              i.fe-icon-check-circle.text-success
+              | Sustainable / lead design
+            dd Quis nostrum exercitationem ullam corporis suscipit laboriosam
+            dt
+              i.fe-icon-check-circle.text-success
+              | Construction documents
+            dd Vestibulum id ligula porta felis euismod semper eget lacinia odio
+            dt
+              i.fe-icon-check-circle.text-success
+              | Historic preservation
+            dd Quis nostrum exercitationem ullam corporis suscipit laboriosam
+            dt
+              i.fe-icon-check-circle.text-success
+              | 3D renderings
+            dd Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+            dt
+              i.fe-icon-check-circle.text-success
+              | Consultant coordination
+            dd Itaque earum rerum hic tenetur a sapiente delectus reiciendis volu
+
+  // Projects
+  section#projects.bg-secondary.py-5
+    .container
+      h2.py-3.text-center.text-lg-left Projects
+      ul(class='nav nav-tabs nav-tabs-style-4 bg-white nav-justified mb-30')
+        li.nav-item
+          a(href='#' class='nav-link py-3 active' data-filter='*')
+            img(src='img/homepages/architect-agency/icon-all.png' width='40' alt='All').d-block.mx-auto.mb-2
+            | All
+        li.nav-item
+          a(href='#' class='nav-link py-3' data-filter='.residential')
+            img(src='img/homepages/architect-agency/icon-residential.png' width='40' alt='Residential').d-block.mx-auto.mb-2
+            | Residential
+        li.nav-item
+          a(href='#' class='nav-link py-3' data-filter='.commercial')
+            img(src='img/homepages/architect-agency/icon-commercial.png' width='40' alt='Commercial').d-block.mx-auto.mb-2
+            | Commercial
+        li.nav-item
+          a(href='#' class='nav-link py-3' data-filter='.industrial')
+            img(src='img/homepages/architect-agency/icon-industrial.png' width='40' alt='Industrial').d-block.mx-auto.mb-2
+            | Industrial
+        li.nav-item
+          a(href='#' class='nav-link py-3' data-filter='.public')
+            img(src='img/homepages/architect-agency/icon-public.png' width='40' alt='Public').d-block.mx-auto.mb-2
+            | Public
+    .container-fluid
+      .isotope-grid.filter-grid.cols-4
+        .gutter-sizer
+        .grid-sizer
+        // Item
+        a(href='#').grid-item.commercial.img-thumbnail.p-1.mb-30.text-decoration-none
+          img(src='img/homepages/architect-agency/projects/01.jpg' alt='Project')
+          h3.text-lg.p-3.mb-0.text-center Project name
+        // Item
+        a(href='#').grid-item.residential.img-thumbnail.p-1.mb-30.text-decoration-none
+          img(src='img/homepages/architect-agency/projects/02.jpg' alt='Project')
+          h3.text-lg.p-3.mb-0.text-center Project name
+        // Item
+        a(href='#').grid-item.industrial.img-thumbnail.p-1.mb-30.text-decoration-none
+          img(src='img/homepages/architect-agency/projects/03.jpg' alt='Project')
+          h3.text-lg.p-3.mb-0.text-center Project name
+        // Item
+        a(href='#').grid-item.residential.img-thumbnail.p-1.mb-30.text-decoration-none
+          img(src='img/homepages/architect-agency/projects/04.jpg' alt='Project')
+          h3.text-lg.p-3.mb-0.text-center Project name
+        // Item
+        a(href='#').grid-item.public.img-thumbnail.p-1.mb-30.text-decoration-none
+          img(src='img/homepages/architect-agency/projects/05.jpg' alt='Project')
+          h3.text-lg.p-3.mb-0.text-center Project name
+        // Item
+        a(href='#').grid-item.residential.img-thumbnail.p-1.mb-30.text-decoration-none
+          img(src='img/homepages/architect-agency/projects/06.jpg' alt='Project')
+          h3.text-lg.p-3.mb-0.text-center Project name
+        // Item
+        a(href='#').grid-item.industrial.img-thumbnail.p-1.mb-30.text-decoration-none
+          img(src='img/homepages/architect-agency/projects/07.jpg' alt='Project')
+          h3.text-lg.p-3.mb-0.text-center Project name
+        // Item
+        a(href='#').grid-item.commercial.img-thumbnail.p-1.mb-30.text-decoration-none
+          img(src='img/homepages/architect-agency/projects/08.jpg' alt='Project')
+          h3.text-lg.p-3.mb-0.text-center Project name
+        // Item
+        a(href='#').grid-item.residential.img-thumbnail.p-1.mb-30.text-decoration-none
+          img(src='img/homepages/architect-agency/projects/09.jpg' alt='Project')
+          h3.text-lg.p-3.mb-0.text-center Project name
+        // Item
+        a(href='#').grid-item.public.img-thumbnail.p-1.mb-30.text-decoration-none
+          img(src='img/homepages/architect-agency/projects/10.jpg' alt='Project')
+          h3.text-lg.p-3.mb-0.text-center Project name
+        // Item
+        a(href='#').grid-item.industrial.img-thumbnail.p-1.mb-30.text-decoration-none
+          img(src='img/homepages/architect-agency/projects/11.jpg' alt='Project')
+          h3.text-lg.p-3.mb-0.text-center Project name
+        // Item
+        a(href='#').grid-item.commercial.img-thumbnail.p-1.mb-30.text-decoration-none
+          img(src='img/homepages/architect-agency/projects/12.jpg' alt='Project')
+          h3.text-lg.p-3.mb-0.text-center Project name
+  
+  // Contacts
+  section.pt-5.pb-md-3
+    .container.pt-3
+      .row
+        .col-md-4
+          .widget
+            h3.widget-title Contact
+            ul.list-icon
+              li
+                i.fe-icon-phone
+                a(href='tel:+1212477690000').navi-link +1 (212) 477 690 000
+              li
+                i.fe-icon-mail
+                a(href='mailto:contact@example.com').navi-link contact@example.com
+        .col-md-4
+          .widget
+            h3.widget-title Address
+            a(href='#' target='_blank').navi-link 396 Lillian Blvd, Holbrook, NY 11741, USA
+        .col-md-4
+          .widget
+            h3.widget-title Social
+            a(href='#' data-toggle='tooltip' title='Facebook').social-btn.sb-style-6.sb-facebook
+              i.socicon-facebook
+            a(href='#' data-toggle='tooltip' title='Twitter').social-btn.sb-style-6.sb-twitter
+              i.socicon-twitter
+            a(href='#' data-toggle='tooltip' title='YouTube').social-btn.sb-style-6.sb-youtube
+              i.socicon-youtube
+            a(href='#' data-toggle='tooltip' title='Instagram').social-btn.sb-style-6.sb-instagram
+              i.socicon-instagram
+  
+  // Contact Form
+  section.container.position-relative(style='margin-bottom: -110px; z-index: 5;')
+    .wizard
+      .wizard-body.pt-3
+        h2.h4.text-center Drop us a line
+        p.text-muted.text-center We will get back to you as soon as possible
+        form(novalidate).needs-validation
+          .row.pt-3
+            .col-sm-6
+              .form-group
+                label(for='contact-name') Your Name <span class='text-danger font-weight-medium'>*</span>
+                input(type='text' id='contact-name' placeholder='John Doe' required).form-control
+                .invalid-feedback Please enter your name!
+            .col-sm-6
+              .form-group
+                label(for='contact-email') Your Email <span class='text-danger font-weight-medium'>*</span>
+                input(type='email' id='contact-email' placeholder='johndoe@email.com' required).form-control
+                .invalid-feedback Please provide a valid email address!
+          .row
+            .col-sm-6
+              .form-group
+                label(for='contact-subject') Subject
+                input(type='text' id='contact-subject' placeholder='Provide short title of you request').form-control
+            .col-sm-6
+              .form-group
+                label(for='contact-file') Attachment
+                .custom-file
+                  input(type='file' id='contact-file').custom-file-input
+                  label(for='contact-file').custom-file-label Choose file...
+          .form-group
+            label(for='contact-message') Message <span class='text-danger font-weight-medium'>*</span>
+            textarea(rows='7' id='contact-message' placeholder="Let us know more what's on your mind..." required).form-control
+            .invalid-feedback Please write a message!
+          .text-center
+            button(type='submit').btn.btn-style-5.btn-primary Send Message
+  
+  // Footer
+  footer.bg-dark.pt-5.pb-4
+    .container.pt-5
+      .d-md-flex.justify-content-between.align-items-center.pt-5.pb-3.text-center.text-md-left
+        div.order-2
+          a(href='#').footer-link.text-white About
+          a(href='#').footer-link.text-white.ml-3 Help &amp; Info
+          a(href='#').footer-link.text-white.ml-3 Privacy Policy
+        p.m-0.text-sm.text-white.order-1 <span class='opacity-60'>© All rights reserved. Made with</span> <i class='d-inline-block align-middle fe-icon-heart text-danger'></i> <a href='http://createx.studio/' class='d-inline-block nav-link text-white opacity-60 p-0' target='_blank'>by Createx Studio</a>

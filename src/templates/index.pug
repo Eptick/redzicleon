@@ -1,0 +1,341 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-ghost'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var pageTitle = 'Gorilly Digital | Home'
+  - var menuTitle = 'Mobile App Showcase'
+
+//- Page Content
+block content
+
+  // Hero
+  section(style='background-image: url(img/homepages/digital-agency/hero-bg.png);').bg-center.bg-no-repeat.py-5.mt-lg-0.mt-5
+    .row.no-gutters.pt-lg-5.mt-lg-5
+      .col-xl-7.col-lg-8
+        img(src='img/homepages/digital-agency/hero-img.png' alt='Hero Image').d-block
+      .col-lg-4.pt-xl-5
+        .px-3.px-lg-0.text-center.text-lg-left
+          h1.pt-md-5.pt-3.pt-md-0 Say more with less
+          p.pb-md-4.pb-3.pb-md-5
+            strong Gorilly is a digital agency capable of every workload
+          a(href='#services').scroll-to.btn.btn-style-4.btn-gradient.btn-icon-right.btn-lg
+            | Learn How
+            i.fe-icon-arrow-down
+  //- // Hero
+  //- section.pt-2
+  //-  .bg-center-top.bg-no-repeat.mt-md-5.pt-5(style='background-image: url(img/homepages/mobile-app-showcase/hero-bg.png);')
+  //-     .container.pt-5.pb-5.pb-md-2
+  //-       .row
+  //-         .col-lg-7.col-md-6
+  //-           img(src='img/homepages/mobile-app-showcase/hero-device.png' alt='CreateX App').d-block.mx-auto.mr-md-5
+  //-         .col-lg-5.col-md-6.pt-md-5.text-center.text-md-left
+  //-           h1.pt-md-5.pb-md-4 Say more, with less
+  //-           h5 We are a company that provides IT solutions for your needs, for that we have partnered up with
+  //-           .pt-4.mt-md-3
+  //-             a(href='https://www.atlassian.com/').market-btn.atlassian-btn.mr-3.mb-3
+  //-               span.mb-subtitle Our partner
+  //-               span.mb-title Atlassian
+  //-             a(href='https://www.microsoft.com/').market-btn.microsoft-btn.mb-3
+  //-               span.mb-subtitle Our partner
+  //-               span.mb-title Microsoft
+  
+  // Process
+  section.container.pb-4
+    h2.h3.block-title.text-center.pt-2 How we work
+    .row.py-2
+      .col-lg-3.col-sm-6
+        // Step
+        .step.step-with-icon
+          .step-number 1
+          .step-icon: img(src='img/icons/user-data.svg' alt='Gathering User Data')
+          h3.step-title Gathering User Data
+          p.step-text.text-sm Every starting point of a project is information gathering, what makes a good project is quality information.
+          a(href='#services').step-link
+            | Learn more
+            i.fe-icon-arrow-right
+      .col-lg-3.col-sm-6
+        // Step
+        .step.step-with-icon
+          .step-number 2
+          .step-icon: img(src='img/icons/prototyping.svg' alt='Prototyping (Wireframes)')
+          h3.step-title Prototyping (Wireframes)
+          p.step-text.text-sm Wireframes provied both parties a general sense of direction where the project is headed and can prevent unwanted mistakes.
+          a(href='#services').step-link
+            | Learn more
+            i.fe-icon-arrow-right
+      .col-lg-3.col-sm-6
+        // Step
+        .step.step-with-icon
+          .step-number 3
+          .step-icon: img(src='img/icons/ui-design.svg' alt='Pixel-perfect UI Design')
+          h3.step-title Pixel-perfect UI Design
+          p.step-text.text-sm UI design phase depends on the previous two phases as the quality of the design is directly connected to the information on how the product is used.
+          a(href='#services').step-link
+            | Learn more
+            i.fe-icon-arrow-right
+      .col-lg-3.col-sm-6
+        // Step
+        .step.step-with-icon
+          .step-number 4
+          .step-icon: img(src='img/icons/coding.svg' alt='Development (Coding)')
+          h3.step-title Development (Coding)
+          p.step-text.text-sm This is the time buckle down and write the maintanable and readable code that is a pleasure to work on and make changes to.
+          a(href='#services').step-link
+            | Learn more
+            i.fe-icon-arrow-right
+  // Services
+  section#services.bg-dark.py-5
+    .container.pt-4
+      h2.h3.block-title.text-white.text-center.px-3 We develop digital strategies, products, services and some other cool things
+      .row.pt-4
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#features').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/homepages/digital-agency/services/01.jpg' alt='Branding & identity').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 Branding &amp; identity
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#features').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/homepages/digital-agency/services/02.jpg' alt='UI / UX design').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 UI / UX design
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#features').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/homepages/digital-agency/services/03.jpg' alt='Front-end development').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 Front-end development
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#features').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/homepages/digital-agency/services/04.jpg' alt='Digital strategy').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 Digital strategy
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#features').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/homepages/digital-agency/services/05.jpg' alt='Back-end development').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 Back-end development
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/homepages/digital-agency/services/06.jpg' alt='Mobile development').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 Mobile development
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#features').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/blog/08.jpg' alt='Seo optimisation').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 SEO Optimisation
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#features').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/gorilly/3dprint.jpg' alt='3D design & print').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 3D design & print
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#features').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/gorilly/interior.jpg' alt='Interior design').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 Interior design
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#features').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/gorilly/infrastructure.jpg' alt='IT infrastructure').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 IT infrastructure
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#features').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/gorilly/hardware.jpg' alt='Harware consulting').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 Hardware consulting
+        .col-lg-4.col-sm-6.mb-30
+          a(href='#features').d-block.bg-white.box-shadow.text-decoration-none
+            img(src='img/gorilly/networking.jpg' alt='Seo optimisation').d-block.w-100
+            .p-4
+              h3.text-xl.font-weight-bold.mb-0 Networking solutions
+
+  section(style='background-image: url(img/homepages/mobile-app-showcase/features-bg.png);').bg-center-top.bg-no-repeat#services
+
+    // Features
+    .container.pb-5.pt-5#features
+      h2.h3.block-title.text-center
+        | Gorilly Digital d.o.o.
+        small We make shit work
+      .row.pt-3
+        .col-lg-4.col-sm-6.mb-30
+          // Icon Box
+          .icon-box.text-center.bg-white.box-shadow.mx-auto
+            .icon-box-icon: i.fe-icon-award
+            h3.icon-box-title Certified proffesionals
+            p.icon-box-text.text-sm Our employees are Atlassian and Microsoft certified to work with all range of products
+        .col-lg-4.col-sm-6.mb-30
+          // Icon Box
+          .icon-box.text-center.bg-white.box-shadow.mx-auto
+            .icon-box-icon: i.fe-icon-trending-up
+            h3.icon-box-title Truly High Performance
+            p.icon-box-text.text-sm Our employes improve on their knowledge trough company encouraged education and certification
+        .col-lg-4.col-sm-6.mb-30
+          // Icon Box
+          .icon-box.text-center.bg-white.box-shadow.mx-auto
+            .icon-box-icon: i.fe-icon-bell
+            h3.icon-box-title Always available proffesionals
+            p.icon-box-text.text-sm We provide a user experience where the customer can always contact our employees and will recive a response ASAP
+        .col-lg-4.col-sm-6.mb-30
+          // Icon Box
+          .icon-box.text-center.bg-white.box-shadow.mx-auto
+            .icon-box-icon: i.fe-icon-layers
+            h3.icon-box-title Layered solutions
+            p.icon-box-text.text-sm We provide multi layered solutions that integrate multiple vendors or your custom solutions togheter into a whole system
+        .col-lg-4.col-sm-6.mb-30
+          // Icon Box
+          .icon-box.text-center.bg-white.box-shadow.mx-auto
+            .icon-box-icon: i.fe-icon-upload-cloud
+            h3.icon-box-title Cloud Solutions
+            p.icon-box-text.text-sm The cloud is only someone elses computer, if we can access it, we can provide you with a cloud based solution that fits your needs
+        .col-lg-4.col-sm-6.mb-30
+          // Icon Box
+          .icon-box.text-center.bg-white.box-shadow.mx-auto
+            .icon-box-icon: i.fe-icon-smartphone
+            h3.icon-box-title Mobile solutions
+            p.icon-box-text.text-sm In today's world, we have to stay mobile, so our team is prepared to develop and deploy mobile solutions that suits your needs
+
+    // Clients
+    .container.pb-3.pt-lg-2
+      h2.h3.block-title.text-center
+        | Clients 
+        small Our employees have worked with or for some of these companies
+  .container-fluid.pb-5
+    .gorilly-clients-carousel.owl-carousel.carousel-flush(data-owl-carousel='{ "nav": false, "dots": true, "autoHeight": true, "responsive": {"0":{"items":1},"500":{"items":2},"920":{"items":3},"1200":{"items":4},"1400":{"items":5}} }')
+      figure.figure.mb-4
+        a(href="https://erstebank.hr", target="_blank")
+          img(src='img/gorilly/clients/erste.png' alt='Erste').figure-img.m-0
+      figure.figure.mb-4
+        a(href="https://in2.hr", target="_blank")
+          img(src='img/gorilly/clients/in2.png' alt='IN2').figure-img.m-0
+      figure.figure.mb-4
+        a(href="https://marzito.com", target="_blank")
+          img(src='img/gorilly/clients/marzito.png' alt='Marzito').figure-img.m-0
+      figure.figure.mb-4
+        a(href="https://igea.hr", target="_blank")
+          img(src='img/gorilly/clients/igea.png' alt='Igea').figure-img.m-0
+      figure.figure.mb-4
+        a(href="https://euroart93.hr", target="_blank")
+          img(src='img/gorilly/clients/euroart.jpg' alt='Euroart 93').figure-img.m-0
+      figure.figure.mb-4
+        a(href="https://nth.ch", target="_blank")
+          img(src='img/gorilly/clients/nth.png' alt='NTH').figure-img.m-0
+      figure.figure.mb-4
+        a(href="https://algebra.hr", target="_blank")
+          img(src='img/gorilly/clients/algebra.jpg' alt='Algebra').figure-img.m-0
+      figure.figure.mb-4
+        a(href="https://ecg.hr", target="_blank")
+          img(src='img/gorilly/clients/ecg.png' alt='ECG').figure-img.m-0
+      figure.figure.mb-4
+        a(href="https://wiener.hr", target="_blank")
+          img(src='img/gorilly/clients/wiener.png' alt='Wiener').figure-img.m-0
+  
+  // Tablet Version
+  section.container-fluid.pt-lg-2.pb-5#contact
+    .row.align-items-center
+      .col-xl-4.offset-xl-2.col-lg-6.col-md-5.pb-4.text-center.text-md-left
+        h2.h3 Contact us
+        p.text-muted.pt-3.pb-4 We will answer you in the shortest possible time. Let us know what we can do for you, please be as descriptive as posible so that we can provide the best information we can.
+        .contact-form
+          form(action="https://d5ro4la0yd.execute-api.eu-central-1.amazonaws.com/send-mail" method="POST").needs-validation.ajax-submit
+            .row.hidden.success-message
+              .alert.alert-success.alert-dismissible.fade.show.text-center.mb-4.w-100
+                span(data-dismiss='alert').close
+                i.fe-icon-check-square
+                | &nbsp;&nbsp;<strong>Success alert:</strong> Message sent
+            .row.hidden.error-message
+              .alert.alert-danger.alert-dismissible.fade.show.text-center.mb-4
+                span(data-dismiss='alert').close
+                i.fe-icon-slash
+                | &nbsp;&nbsp;<strong>Danger alert:</strong> Message failed to send, contact us at <a href="mailto:website@gorilly.digital">website@gorilly.digital</a>
+            .row.pt-3
+              .col-sm-6
+                .form-group
+                  label(for='contact-name') Your Name <span class='text-danger font-weight-medium'>*</span>
+                  input(type='text' id='contact-name' placeholder='John Doe' name="name" required).form-control
+                  .invalid-feedback Please enter your name!
+              .col-sm-6
+                .form-group
+                  label(for='contact-email') Your Email <span class='text-danger font-weight-medium'>*</span>
+                  input(type='email' id='contact-email' placeholder='johndoe@email.com' name="email" required).form-control
+                  .invalid-feedback Please provide a valid email address!
+            .form-group
+              label(for='contact-message') Message <span class='text-danger font-weight-medium'>*</span>
+              textarea(rows='7' id='contact-message' placeholder="Let us know more what's on your mind..." name="message" required).form-control
+              .invalid-feedback Please write a message!
+            .text-center
+              button(type='submit').btn.btn-primary
+                span(role='status' aria-hidden='true').spinner-border.spinner-border-sm.text-light.mr-2.hidden.loading
+                | Send Message
+
+      .col-lg-6.col-md-7
+        img(src='img/homepages/mobile-app-showcase/tablet-website.png' alt='Tablet Version')
+  
+  // CTA + Numbers
+  section(style='background-image: url(img/homepages/mobile-app-showcase/cta-bg.jpg);').bg-center-top.bg-no-repeat.bg-cover.pb-4
+    .container-fluid.pb-4
+      .row
+        .col-md-3.col-sm-6.border-white.border-right.py-5.border-bottom
+          .animated-digits.text-white.mx-auto.text-center(data-number='20')
+            h5.animated-digits-digit.text-white
+              span 0
+              | +
+            p.animated-digits-text
+              | Totally satisfied customers
+        .col-md-3.col-sm-6.py-5.border-white.border-right.border-bottom
+          .animated-digits.text-white.mx-auto.text-center(data-number='98')
+            h5.animated-digits-digit.text-white
+              span 0
+              | %
+            p.animated-digits-text
+              | Positive feedback
+        .col-md-3.col-sm-6.py-5.border-white.border-right.border-bottom
+          .animated-digits.text-white.mx-auto.text-center(data-number='936')
+            h5.animated-digits-digit.text-white
+              span 0
+              | +
+            p.animated-digits-text
+              | Coffees drank 
+        .col-md-3.col-sm-6.py-5.border-white.border-bottom
+          .animated-digits.text-white.mx-auto.text-center(data-number='5')
+            h5.animated-digits-digit.text-white
+              span 0
+            p.animated-digits-text
+              | years of experience
+    .container.py-5.text-center
+      h2.h3.block-title.text-white Subscribe to our newsletter
+      .row.justify-content-center.pt-3
+        .col-xl-7.col-lg-8.col-md-10
+          p.text-white.opacity-60.pb-4 Enter email to receive a newsletter with new posts, when we feel like it, not too often, monthly, maybe, maybe not.
+          form(action='https://kcn9pmk5i8.execute-api.eu-central-1.amazonaws.com/send-newsletter' method='post' target='_blank' novalidate).needs-validation.ajax-submit
+            .row.hidden.success-message
+              .alert.alert-success.alert-dismissible.fade.show.text-center.mb-4.w-100.bg-white
+                span(data-dismiss='alert').close
+                i.fe-icon-check-square
+                | &nbsp;&nbsp;<strong>Success alert:</strong> Message sent
+            .row.hidden.error-message
+              .alert.alert-danger.alert-dismissible.fade.show.text-center.mb-4.bg-white
+                span(data-dismiss='alert').close
+                i.fe-icon-slash
+                | &nbsp;&nbsp;<strong>Danger alert:</strong> Message failed to send, contact us at <a href="mailto:website@gorilly.digital">website@gorilly.digital</a>
+            .input-group
+              input(type='email' name='email' placeholder="Email address").form-control.form-control-dark-skin
+              .input-group-append
+                button(type='submit').btn.btn-primary Sign Up
+            // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            div(style='position: absolute; left: -5000px;' aria-hidden='true')
+              input(type='text' name='b_c7103e2c981361a6639545bd5_1194bb7544' tabindex='-1')
+
+  // Footer
+  footer.container.pt-3
+    .py-5.my-3.text-center
+      a(href='index.html').navbar-brand.d-inline-block.pb-2
+        img(src='img/gorilly/gorilly.svg' alt='Gorilly Digital d.o.o.')
+      .pt-4
+        include partials/social
+    hr
+    .d-md-flex.justify-content-between.align-items-center.py-4.text-center.text-md-left
+      div.order-2
+      p.m-0.text-sm.order-1 <span class='opacity-60'>© All rights reserved. Made with</span> <i class='d-inline-block align-middle fe-icon-heart text-danger'></i> <a href='http://gorilly.digital/' class='d-inline-block navi-link opacity-80 p-0' target='_blank'>by Gorilly Digital</a>

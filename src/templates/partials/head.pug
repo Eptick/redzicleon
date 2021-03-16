@@ -1,0 +1,44 @@
+head
+  meta(charset="utf-8")
+  if isTagManager
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    script(async src="https://www.googletagmanager.com/gtag/js?id=G-R17S0PCZV5")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date())
+      gtag('config', 'G-R17S0PCZV5');
+  title
+    block title
+      | #{pageTitle}
+
+  // SEO Meta Tags
+  meta(name="description", content="Gorilly digital - say more with less")
+  meta(name="keywords", content="gorilly, digital, gorilly digital, attlasian, azure, microsoft, partner, website, wordpress, agency")
+  meta(name="author", content="Gorilly Digital d.o.o.")
+
+  // Viewport
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+
+  // Favicon and Touch Icons
+  link(rel="apple-touch-icon", sizes="180x180")&attributes(isNestedFile ? {'href':'../apple-touch-icon.png'} : {'href':'apple-touch-icon.png'})
+  link(rel="icon", type="image/png", sizes="32x32")&attributes(isNestedFile ? {'href':'../favicon-32x32.png'} : {'href':'favicon-32x32.png'})
+  link(rel="icon", type="image/png", sizes="16x16")&attributes(isNestedFile ? {'href':'../favicon-16x16.png'} : {'href':'favicon-16x16.png'})
+  link(rel="manifest")&attributes(isNestedFile ? {'href':'../site.webmanifest'} : {'href':'site.webmanifest'})
+  link(rel="mask-icon", color="#343b43")&attributes(isNestedFile ? {'href':'../safari-pinned-tab.svg'} : {'href':'safari-pinned-tab.svg'})
+  meta(name="msapplication-TileColor", content="#603cba")
+  meta(name="theme-color", content="#ffffff")
+
+  // Vendor Styles including: Font Icons, Plugins, etc.
+  link(rel="stylesheet", media="screen")&attributes(isNestedFile ? {'href': '../css/vendor.min.css'} : {'href': 'css/vendor.min.css'})
+
+  // Main Theme Styles + Bootstrap
+  link(rel="stylesheet", media="screen")&attributes(isNestedFile ? {'href': '../css/theme.min.css'} : {'href': 'css/theme.min.css'})
+
+
+  // Modernizr
+  script()&attributes(isNestedFile ? {'src': '../js/modernizr.min.js'} : {'src': 'js/modernizr.min.js'})
+
+  if isGoogleMap
+    // Google Map API
+    script(async defer src="//maps.googleapis.com/maps/api/js?key=REPLACE_KEY")

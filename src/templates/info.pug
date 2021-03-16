@@ -1,0 +1,126 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var navbarTemplate = 'navbar-ghost'
+  - var isPageTitle = false
+  - var parentMenu = 'Home'
+  - var pageTitle = 'Gorilly Digital | Home'
+  - var menuTitle = 'Mobile App Showcase'
+
+//- Page Content
+block content
+
+  // Hero
+  section.pt-2(style="margin-top: 120px")
+    .table-responsive
+      table.table.table-dark.table-striped
+        tbody
+          tr
+            th(scope="row") Naziv
+            td Gorilly Digital d.o.o.
+          tr
+            th(scope="row") OIB
+            td 49573276798
+          tr
+            th(scope="row") Matični broj
+            td 05241146
+          tr
+            th(scope="row") PDV ID (VAT ID)
+            td HR49573276798
+          tr
+            th(scope="row") Adresa
+            td Capraška Ulica 12
+          tr
+            th(scope="row") Dodatak adresi
+            td 5ti kat, ured 503
+          tr
+            th(scope="row") Poštanski broj
+            td 44010 Sisak-Caprag
+          tr
+            th(scope="row") Grad
+            td Sisak
+          tr
+            th(scope="row") Država
+            td Hrvatska
+    h4 Bankovni podaci
+    .table-responsive
+      table.table.table-dark.table-striped
+        tbody
+          tr
+            th(scope="row") Banka
+            td Erste&Steiermärkische Bank d.d
+          tr
+            th(scope="row") IBAN
+            td HR2524020061100967135
+          tr
+            th(scope="row") SWIFT
+            td ESBCHR22
+          tr
+            th(scope="row") PDV ID (VAT ID) Gorilly
+            td HR49573276798
+    h4 Kontakt podaci
+    .table-responsive
+      table.table.table-dark.table-striped
+        tbody
+          tr
+            th(scope="row") Mobitel
+            td
+              a(href="tel:385955465329") +385 95 546 5329
+          tr
+            th(scope="row") Email
+            td
+              a(href="mailto:info@gorilly.digital") info@gorilly.digital
+    h4 Social
+    .table-responsive
+      table.table.table-dark.table-striped
+        tbody
+          tr
+            th(scope="row") Facebook
+            td
+              a(href="https://fb.me/gorillydigital") https://fb.me/gorillydigital
+          tr
+            th(scope="row") Instagram
+            td
+              a(href="https://www.instagram.com/gorilly_digital/") https://www.instagram.com/gorilly_digital/
+          tr
+            th(scope="row") Twitter
+            td
+              a(href="https://twitter.com/gorilly_digital") https://twitter.com/gorilly_digital
+          tr
+            th(scope="row") Pintrest
+            td
+              a(href="#") #
+          tr
+            th(scope="row") LinkedIn
+            td
+              a(href="https://www.linkedin.com/company/gorilly-digital") https://www.linkedin.com/company/gorilly-digital
+          tr
+            th(scope="row") Dribble
+            td
+              a(href="https://dribbble.com/gorilly_digital") https://dribbble.com/gorilly_digital
+          tr
+            th(scope="row") Github
+            td
+              a(href="https://github.com/organizations/Gorilly-Digital") https://github.com/organizations/Gorilly-Digital
+          tr
+            th(scope="row") Gitlab
+            td
+              a(href="https://gitlab.com/gorilly") https://gitlab.com/gorilly
+          tr
+            th(scope="row") youtube
+            td
+              a(href="https://www.youtube.com/channel/UCx8vvDupnvHILLVw0yt_ogw") https://www.youtube.com/channel/UCx8vvDupnvHILLVw0yt_ogw
+
+
+  // Footer
+  footer.container.pt-3
+    .py-5.my-3.text-center
+      a(href='index.html').navbar-brand.d-inline-block.pb-2
+        img(src='img/gorilly/gorilly.svg' alt='Gorilly Digital d.o.o.')
+      .pt-4
+        include partials/social
+    hr
+    .d-md-flex.justify-content-between.align-items-center.py-4.text-center.text-md-left
+      div.order-2
+      p.m-0.text-sm.order-1 <span class='opacity-60'>© All rights reserved. Made with</span> <i class='d-inline-block align-middle fe-icon-heart text-danger'></i> <a href='http://gorilly.digital/' class='d-inline-block navi-link opacity-80 p-0' target='_blank'>by Gorilly Digital</a>
