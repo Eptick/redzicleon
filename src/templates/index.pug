@@ -5,46 +5,47 @@ append config
   - var navbarTemplate = 'navbar-ghost'
   - var isPageTitle = false
   - var parentMenu = 'Home'
-  - var pageTitle = 'Gorilly Digital | Home'
-  - var menuTitle = 'Mobile App Showcase'
+  - var pageTitle = 'Redžić Leon'
+  - var menuTitle = 'Redžić Leon'
 
 //- Page Content
 block content
 
   // Hero
-  section(style='background-image: url(img/homepages/digital-agency/hero-bg.png);').bg-center.bg-no-repeat.py-5.mt-lg-0.mt-5
-    .row.no-gutters.pt-lg-5.mt-lg-5
-      .col-xl-7.col-lg-8
-        img(src='img/homepages/digital-agency/hero-img.png' alt='Hero Image').d-block
-      .col-lg-4.pt-xl-5
-        .px-3.px-lg-0.text-center.text-lg-left
-          h1.pt-md-5.pt-3.pt-md-0 Say more with less
-          p.pb-md-4.pb-3.pb-md-5
-            strong Gorilly is a digital agency capable of every workload
-          a(href='#services').scroll-to.btn.btn-style-4.btn-gradient.btn-icon-right.btn-lg
-            | Learn How
-            i.fe-icon-arrow-down
-  //- // Hero
-  //- section.pt-2
-  //-  .bg-center-top.bg-no-repeat.mt-md-5.pt-5(style='background-image: url(img/homepages/mobile-app-showcase/hero-bg.png);')
-  //-     .container.pt-5.pb-5.pb-md-2
-  //-       .row
-  //-         .col-lg-7.col-md-6
-  //-           img(src='img/homepages/mobile-app-showcase/hero-device.png' alt='CreateX App').d-block.mx-auto.mr-md-5
-  //-         .col-lg-5.col-md-6.pt-md-5.text-center.text-md-left
-  //-           h1.pt-md-5.pb-md-4 Say more, with less
-  //-           h5 We are a company that provides IT solutions for your needs, for that we have partnered up with
-  //-           .pt-4.mt-md-3
-  //-             a(href='https://www.atlassian.com/').market-btn.atlassian-btn.mr-3.mb-3
-  //-               span.mb-subtitle Our partner
-  //-               span.mb-title Atlassian
-  //-             a(href='https://www.microsoft.com/').market-btn.microsoft-btn.mb-3
-  //-               span.mb-subtitle Our partner
-  //-               span.mb-title Microsoft
-  
+  section(style='background-image: url(img/homepages/freelancer-portfolio/hero-bg.png);').bg-center.bg-repeat-y.box-shadow
+    .container
+      .row
+        .col-md-6.bg-secondary.order-md-2.pt-md-5.overflow-hidden
+          .mt-5.pt-5
+            img(src='img/gorilly/portrait.png' alt='Leon Redžić' data-parallax='{"scale" : 1.15}').d-block.mx-auto
+        .col-md-6.bg-white.order-md-1.py-md-5.overflow-hidden
+          .mt-md-5.py-5.text-center.text-md-left
+            h2.h3.text-body.pt-md-5.pb-3
+              span.d-block.font-family-body.font-weight-light.pb-2 Hello!
+              span.d-block.font-family-body.font-weight-light I am <span class='font-weight-bold'>Leon Redžić</span>
+            h1(data-parallax='{"x" : 50}').mb-4.mb-md-5
+              img(src='img/gorilly/fullstack.jpg' width='495' alt='Full stack developer').d-block.mx-auto.mx-md-0
+              span.d-none Full stack developer
+            .pt-3
+              a(href='#contact' data-parallax='{"y" : 25}').scroll-to.btn.btn-style-4.btn-primary.mr-3.mb-3 Hire me
+              a(href='#services' data-parallax='{"y" : -25}').scroll-to.btn.btn-style-4.btn-gradient.btn-icon-right.mb-3
+                i.fe-icon-arrow-down.text-md
+                | See I all do
+            .pt-4.pt-md-5
+              include partials/social
+
+  // About
+  section.container.py-5
+    .row.justify-content-center
+      .col-lg-6.col-md-8.pt-3.text-center
+        span.d-block.text-lg.mb-2 Few words about me
+        h2.h3.block-title.mb-3 Design and development
+        p.text-muted I design everything from UI design to interior design. Because I also do development that affects even how I design a product and is in my opinion beneficial to the quality of said product.
+    hr.mt-5
+
   // Process
   section.container.pb-4
-    h2.h3.block-title.text-center.pt-2 How we work
+    h2.h3.block-title.text-center.pt-5 How I work
     .row.py-2
       .col-lg-3.col-sm-6
         // Step
@@ -89,7 +90,7 @@ block content
   // Services
   section#services.bg-dark.py-5
     .container.pt-4
-      h2.h3.block-title.text-white.text-center.px-3 We develop digital strategies, products, services and some other cool things
+      h2.h3.block-title.text-white.text-center.px-3 I develop digital strategies, products, services and some other cool things
       .row.pt-4
         .col-lg-4.col-sm-6.mb-30
           a(href='#features').d-block.bg-white.box-shadow.text-decoration-none
@@ -158,7 +159,7 @@ block content
     .container.pb-5.pt-5#features
       h2.h3.block-title.text-center
         | Gorilly Digital d.o.o.
-        small We make shit work
+        small Is a company of my own making that provides solutions to IT problems
       .row.pt-3
         .col-lg-4.col-sm-6.mb-30
           // Icon Box
@@ -201,7 +202,7 @@ block content
     .container.pb-3.pt-lg-2
       h2.h3.block-title.text-center
         | Clients 
-        small Our employees have worked with or for some of these companies
+        small Over the years I have gained experience working with or for some of these companies
   .container-fluid.pb-5
     .gorilly-clients-carousel.owl-carousel.carousel-flush(data-owl-carousel='{ "nav": false, "dots": true, "autoHeight": true, "responsive": {"0":{"items":1},"500":{"items":2},"920":{"items":3},"1200":{"items":4},"1400":{"items":5}} }')
       figure.figure.mb-4
@@ -236,8 +237,8 @@ block content
   section.container-fluid.pt-lg-2.pb-5#contact
     .row.align-items-center
       .col-xl-4.offset-xl-2.col-lg-6.col-md-5.pb-4.text-center.text-md-left
-        h2.h3 Contact us
-        p.text-muted.pt-3.pb-4 We will answer you in the shortest possible time. Let us know what we can do for you, please be as descriptive as posible so that we can provide the best information we can.
+        h2.h3 Contact me
+        p.text-muted.pt-3.pb-4 I will answer you in the shortest possible time. Let me know what I can do for you, please be as descriptive as posible so that I can provide the best information I can.
         .contact-form
           form(action="https://d5ro4la0yd.execute-api.eu-central-1.amazonaws.com/send-mail" method="POST").needs-validation.ajax-submit
             .row.hidden.success-message
@@ -275,37 +276,8 @@ block content
   
   // CTA + Numbers
   section(style='background-image: url(img/homepages/mobile-app-showcase/cta-bg.jpg);').bg-center-top.bg-no-repeat.bg-cover.pb-4
-    .container-fluid.pb-4
-      .row
-        .col-md-3.col-sm-6.border-white.border-right.py-5.border-bottom
-          .animated-digits.text-white.mx-auto.text-center(data-number='20')
-            h5.animated-digits-digit.text-white
-              span 0
-              | +
-            p.animated-digits-text
-              | Totally satisfied customers
-        .col-md-3.col-sm-6.py-5.border-white.border-right.border-bottom
-          .animated-digits.text-white.mx-auto.text-center(data-number='98')
-            h5.animated-digits-digit.text-white
-              span 0
-              | %
-            p.animated-digits-text
-              | Positive feedback
-        .col-md-3.col-sm-6.py-5.border-white.border-right.border-bottom
-          .animated-digits.text-white.mx-auto.text-center(data-number='936')
-            h5.animated-digits-digit.text-white
-              span 0
-              | +
-            p.animated-digits-text
-              | Coffees drank 
-        .col-md-3.col-sm-6.py-5.border-white.border-bottom
-          .animated-digits.text-white.mx-auto.text-center(data-number='5')
-            h5.animated-digits-digit.text-white
-              span 0
-            p.animated-digits-text
-              | years of experience
     .container.py-5.text-center
-      h2.h3.block-title.text-white Subscribe to our newsletter
+      h2.h3.block-title.text-white Subscribe to Gorilly Digital
       .row.justify-content-center.pt-3
         .col-xl-7.col-lg-8.col-md-10
           p.text-white.opacity-60.pb-4 Enter email to receive a newsletter with new posts, when we feel like it, not too often, monthly, maybe, maybe not.
@@ -331,8 +303,8 @@ block content
   // Footer
   footer.container.pt-3
     .py-5.my-3.text-center
-      a(href='index.html').navbar-brand.d-inline-block.pb-2
-        img(src='img/gorilly/gorilly.svg' alt='Gorilly Digital d.o.o.')
+      a(href='/').navbar-brand.d-inline-block.pb-2
+        //- img(src='img/gorilly/gorilly.svg' alt='Gorilly Digital d.o.o.')
       .pt-4
         include partials/social
     hr
