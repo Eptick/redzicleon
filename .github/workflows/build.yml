@@ -27,7 +27,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        # strip_components: 1
+        strip_components: 2
         rm: true
         source: "dist/redzicleon"
         target: "/var/www/redzic.hr/"
