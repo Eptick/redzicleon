@@ -30,4 +30,4 @@ jobs:
         strip_components: 2
         rm: true
         source: "dist/redzicleon"
-        target: "/var/www/redzic.hr/"
+        target: "/var/www/redzic.hr/index"
