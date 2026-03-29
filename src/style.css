@@ -1,3 +1,14 @@
+:root {
+  --color-dark-teal: #114B5F;
+  --color-teal: #028090;
+  --color-frosted-mint: #E4FDE1;
+  --color-baltic-blue: #456990;
+  --color-pink: #F45B69;
+
+  --color-github: #101411;
+  --color-linked-in: #0A66C2;
+  --color-toptal: #204ECF;
+}
 .noto-sans-thin {
   font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
@@ -14,11 +25,22 @@ html {
   font-weight: 300;
   font-style: normal;
   font-variation-settings: "wdth" 300;
-  letter-spacing: 3p2;
 }
 body {
   padding: 1%;
-  padding-top: 2vh;
+  padding-top: 8vh;
+}
+
+h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 5px 0;
+}
+h3 {
+  font-size: 0.95rem;
+  font-weight: 300;
+  padding: 5px 0;
+  color: #838383;
 }
 #container {
   display: flex;
@@ -31,6 +53,38 @@ header {
 
 }
 header > img {
-  width: 20%;
+  width: 16%;
   border-radius: 50%;
+}
+#header_descriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: self-start;
+  justify-content: center;
+}
+.header_link {
+  margin-top: 8px;
+}
+.header_link > a {
+  font-style: normal;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  padding: 2px 12px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.link_linked_in {
+  background-color: var(--color-linked-in);
+  color: white
+}
+.link_github {
+  background-color: var(--color-github);
+  color: white
+}
+.link_toptal {
+  background-color: var(--color-toptal);
+  color: white
 }
