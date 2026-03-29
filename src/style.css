@@ -19,8 +19,9 @@
 
 html {
   font-size: 100%;
-  font-size: 20px;
-  font-family: "Noto Sans", sans-serif;
+  font-size: 17px;
+  font-family: "Inter", sans-serif;
+  color: #111;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -33,19 +34,37 @@ body {
 
 h1 {
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: 400;
   padding: 5px 0;
+}
+h2 {
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 5px 0;
+  margin-bottom: 15px;
 }
 h3 {
   font-size: 0.95rem;
   font-weight: 300;
   padding: 5px 0;
-  color: #838383;
+  color: #555;
+}
+h4 {
+  font-size: 0.99rem;
+  font-weight: 300;
+  color: #111;
+  line-height: 1.8rem;
+}
+p, small {
+  color: #555;
+  font-weight: 300;
+  line-height: 1.8rem;
 }
 #container {
   display: flex;
   max-width: 800px;
   margin: 0 auto;
+  flex-direction: column;
 }
 header {
   display: flex;
@@ -55,6 +74,7 @@ header {
 header > img {
   width: 16%;
   border-radius: 50%;
+  min-width: 130px;
 }
 #header_descriptions {
   display: flex;
@@ -72,9 +92,10 @@ header > img {
   text-decoration: none;
   border-radius: 50px;
   font-size: 0.8rem;
-  padding: 2px 12px;
+  padding: 6px 12px;
   line-height: 30px;
   font-weight: 300;
+  letter-spacing: 0.06cap;
 }
 .link_linked_in {
   background-color: var(--color-linked-in);
@@ -87,4 +108,24 @@ header > img {
 .link_toptal {
   background-color: var(--color-toptal);
   color: white
+}
+
+
+section {
+  margin-top: 6vh;
+}
+
+.columnar {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 40px;
+  justify-content: left;
+  align-items: self-start;
+}
+.columnar_left {
+  min-width: 120px;
+}
+.columnar_right {
+  width: fit-content
 }
