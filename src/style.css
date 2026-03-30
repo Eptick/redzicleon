@@ -88,28 +88,23 @@ header > img {
 }
 .header_link > a {
   font-style: normal;
-  color: white;
+  color: #111;
+  background: #DDD;
   text-decoration: none;
   border-radius: 50px;
   font-size: 0.8rem;
   padding: 6px 12px;
-  line-height: 30px;
   font-weight: 300;
   letter-spacing: 0.06cap;
+  display: inline-block;
+  line-height: 20px;
 }
-.link_linked_in {
-  background-color: var(--color-linked-in);
-  color: white
+.header_link > a > img {
+  height: 18px;
+  display: block;
+  float: left;
+  margin-right: 5px;
 }
-.link_github {
-  background-color: var(--color-github);
-  color: white
-}
-.link_toptal {
-  background-color: var(--color-toptal);
-  color: white
-}
-
 
 section {
   margin-top: 6vh;
