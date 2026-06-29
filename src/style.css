@@ -127,6 +127,7 @@ section {
 .link {
   text-decoration: none;
   position: relative;
+  display: block;
 }
 .link::after {
   content: ' ';
@@ -135,6 +136,6 @@ section {
   background: url("icons/link.svg");
   width: 7px;
   height: 7px;
-  right: -10px;
-  top: 0px
+  right: -12px;
+  top: 9px
 }
